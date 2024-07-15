@@ -2,8 +2,6 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 import requests
 
-API_KEY = 'da8003c8e810f3828b5903e6e64fd221'
-
 class CurrentWeatherView(APIView):
     def get(self, request, city, format=None):
         url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}"
